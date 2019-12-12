@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="helmes-form:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>helmes-form</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="helmes-form-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="helmes-form:war exploded" />
+    </root>
+  </artifact>
+</component>
