@@ -52,7 +52,7 @@
     </div>
 
     <div class="row">
-        <a class="btn-lg btn-primary pull-right" href="${urlHome}" role="button">Go to list</a>
+        <a class="btn btn-primary pull-right" href="${urlHome}" role="button">Go to list</a>
     </div>
 </div>
 

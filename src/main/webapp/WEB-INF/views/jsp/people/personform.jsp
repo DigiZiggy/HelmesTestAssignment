@@ -72,10 +72,10 @@
             <div class="col-sm-offset-2 col-sm-10">
                 <c:choose>
                     <c:when test="${personForm['new']}">
-                        <button type="submit" class="btn-lg btn-primary pull-right">Save</button>
+                        <button type="submit" class="btn btn-primary pull-right">Save</button>
                     </c:when>
                     <c:otherwise>
-                        <button type="submit" class="btn-lg btn-primary pull-right">Update</button>
+                        <button type="submit" class="btn btn-primary pull-right">Update</button>
                     </c:otherwise>
                 </c:choose>
             </div>
