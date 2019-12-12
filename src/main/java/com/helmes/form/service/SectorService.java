@@ -29,8 +29,13 @@ public class SectorService implements SectorServiceInterface {
     }
 
     @Override
+    public List<Sector> findAllPersonSectors(Integer id) {
+        return sectorDao.findAllPersonSectors(id);
+    }
+
+    @Override
     public void saveOrUpdate(Sector sector) {
-        if (findSectorById(sector.getId()) == null) {
+        if (sector.getId() == null) {
             sectorDao.save(sector);
         } else {
             sectorDao.update(sector);

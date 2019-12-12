@@ -1,6 +1,4 @@
 INSERT INTO person (firstName, lastName) VALUES ('sigrid', 'narep');
-INSERT INTO person (firstName, lastName) VALUES ('meelika', 'lehola');
-INSERT INTO person (firstName, lastName) VALUES ('joe', 'lake');
 
 INSERT INTO sector (id, name) VALUES (1, 'Manufacturing');
 INSERT INTO sector (id, name) VALUES (19, '&nbsp;&nbsp;&nbsp;&nbsp;Construction materials');

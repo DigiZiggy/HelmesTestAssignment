@@ -14,4 +14,5 @@ public interface SectorDaoInterface {
 
     void update(Sector sector);
 
+    List<Sector> findAllPersonSectors(Integer id);
 }

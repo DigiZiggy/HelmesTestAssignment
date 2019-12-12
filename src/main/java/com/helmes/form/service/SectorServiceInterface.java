@@ -11,4 +11,6 @@ public interface SectorServiceInterface {
     List<Sector> findAll();
 
     void saveOrUpdate(Sector sector);
+
+    List<Sector> findAllPersonSectors(Integer id);
 }

@@ -38,6 +38,20 @@ public class PersonDao implements PersonDaoInterface {
 
         namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(person), keyHolder);
         person.setId(keyHolder.getKey().intValue());
+        savePersonSectors(person.getId(), person.getSectors());
+    }
+
+    @Override
+    public void savePersonSectors(Integer id, List<String> sectors) {
+        for (String sector : sectors) {
+            Map<String, Object> params = new HashMap<String, Object>();
+            int sectorId = Integer.parseInt(sector);
+            params.put("sector_id", sectorId);
+            params.put("person_id", id);
+
+            String sql = "INSERT INTO person_sectors (sector_id, person_id) VALUES (:sector_id, :person_id)";
+            namedParameterJdbcTemplate.update(sql, params);
+        }
     }
 
     public List<Person> findAll() {
@@ -69,6 +83,14 @@ public class PersonDao implements PersonDaoInterface {
                 "sectors = :sectors, acceptTerms = :acceptTerms WHERE id = :id";
 
         namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(person));
+        updatePersonSectors(person.getId(), person.getSectors());
+    }
+
+    @Override
+    public void updatePersonSectors(Integer id, List<String> sectors) {
+        String sql = "DELETE FROM person_sectors WHERE person_id = :id";
+        namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource("id", id));
+        savePersonSectors(id, sectors);
     }
 
     @Override
