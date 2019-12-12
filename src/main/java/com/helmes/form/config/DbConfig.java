@@ -23,7 +23,7 @@ public class DbConfig {
 	@Bean
 	public DataSource getDataSource() {
 		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-		return builder.setName("testdb").setType(EmbeddedDatabaseType.HSQL)
+		return builder.setName("db").setType(EmbeddedDatabaseType.HSQL)
 				.addScript("db/sql/schema.sql").addScript("db/sql/data.sql").build();
 	}
 }

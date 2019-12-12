@@ -23,11 +23,6 @@ public class PersonService implements PersonServiceInterface {
     }
 
     @Override
-    public Person findPersonByName(String firstName, String lastName) {
-        return personDao.findPersonByName(firstName, lastName);
-    }
-
-    @Override
     public List<Person> findAll() {
         return personDao.findAll();
     }

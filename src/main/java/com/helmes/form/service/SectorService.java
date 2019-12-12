@@ -1,8 +1,6 @@
 package com.helmes.form.service;
 
-import com.helmes.form.dao.PersonDaoInterface;
 import com.helmes.form.dao.SectorDaoInterface;
-import com.helmes.form.model.Person;
 import com.helmes.form.model.Sector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,5 @@
 package com.helmes.form.dao;
 
-import com.helmes.form.model.Person;
 import com.helmes.form.model.Sector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -82,15 +81,5 @@ public class SectorDao implements SectorDaoInterface {
             sector.setName(rs.getString("name"));
             return sector;
         }
-    }
-
-    private static Map<Integer, String> sectorsMap = new HashMap<>();
-
-    public static void insertSectorToMap(Integer key, String value) {
-        sectorsMap.put(key, value);
-    }
-
-    public static String getSectorValueFromMap(Integer key) {
-        return sectorsMap.get(key);
     }
 }

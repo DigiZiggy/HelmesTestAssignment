@@ -47,10 +47,6 @@ public class PersonDao implements PersonDaoInterface {
         return people;
     }
 
-    public Person findPersonByName(String firstName, String lastName) {
-        return null;
-    }
-
     @Override
     public Person findPersonById(Integer id) {
         Map<String, Object> params = new HashMap<String, Object>();

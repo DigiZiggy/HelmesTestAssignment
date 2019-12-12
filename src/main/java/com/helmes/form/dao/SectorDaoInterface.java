@@ -1,7 +1,5 @@
 package com.helmes.form.dao;
 
-
-import com.helmes.form.model.Person;
 import com.helmes.form.model.Sector;
 
 import java.util.List;

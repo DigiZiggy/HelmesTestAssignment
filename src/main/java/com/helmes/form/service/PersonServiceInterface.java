@@ -8,8 +8,6 @@ public interface PersonServiceInterface {
 
     Person findPersonById(Integer id);
 
-    Person findPersonByName(String firstName, String lastName);
-
     List<Person> findAll();
 
     void saveOrUpdate(Person person);

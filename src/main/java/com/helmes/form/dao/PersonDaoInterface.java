@@ -11,8 +11,6 @@ public interface PersonDaoInterface {
 
     List<Person> findAll();
 
-    Person findPersonByName(String firstName, String lastName);
-
     Person findPersonById(Integer id);
 
     void update(Person person);
