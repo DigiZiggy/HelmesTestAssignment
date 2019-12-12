@@ -6,11 +6,5 @@ import java.util.List;
 
 public interface SectorServiceInterface {
 
-    Sector findSectorById(Integer id);
-
     List<Sector> findAll();
-
-    void saveOrUpdate(Sector sector);
-
-    List<Sector> findAllPersonSectors(Integer id);
 }

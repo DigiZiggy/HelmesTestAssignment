@@ -1,7 +1,6 @@
 package com.helmes.form.dao;
 
 import com.helmes.form.model.Person;
-import com.helmes.form.model.Sector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -108,15 +107,6 @@ public class PersonDao implements PersonDaoInterface {
             person.setSectors(convertStringToList(rs.getString("sectors")));
             person.setAcceptTerms(rs.getBoolean("acceptTerms"));
             return person;
-        }
-    }
-
-    private static final class SectorMapper implements RowMapper<Sector> {
-        public Sector mapRow(ResultSet rs, int rowNum) throws SQLException {
-            Sector sector = new Sector();
-            sector.setId(rs.getInt("id"));
-            sector.setName(rs.getString("name"));
-            return sector;
         }
     }
 
