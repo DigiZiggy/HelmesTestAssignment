@@ -1,4 +1,4 @@
-Helmes Test Assignment
+Test Assignment
 ===============================
 Tasks:
 1. Correct all of the deficiencies in index.html
